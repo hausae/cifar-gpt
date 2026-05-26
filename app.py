@@ -303,10 +303,10 @@ with col_up:
     with st.container(border=True):
         st.markdown('<span class="sec-lbl">Upload Image</span>', unsafe_allow_html=True)
         uploaded = st.file_uploader("upload", type=["jpg","jpeg","png","webp"],
-                                    label_visibility="collapsed")
+                                    key="main_upload", label_visibility="collapsed")
         if uploaded:
             pil_img = Image.open(uploaded)
-            st.image(pil_img, use_container_width=True)
+            st.image(pil_img, use_column_width=True)
             with st.expander("🔬 32×32 preprocessed input"):
                 tiny = pil_img.convert("RGB").resize((IMG_SIZE, IMG_SIZE), Image.LANCZOS)
                 st.image(tiny, width=120)
@@ -378,7 +378,7 @@ for i, (col, label, true_cls) in enumerate(zip(st.columns(5, gap="small"), val_l
                                      key=f"val_{i}", label_visibility="collapsed")
             if vfile:
                 vpil = Image.open(vfile)
-                st.image(vpil, use_container_width=True)
+                st.image(vpil, use_column_width=True)
                 with st.spinner(""):
                     vcls, vconf, _ = predict(model, vpil)
                 correct = vcls == true_cls
