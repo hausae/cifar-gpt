@@ -406,7 +406,10 @@ if val_results:
                     f"| {CLASS_EMOJIS.get(r['predicted'],'')} {r['predicted'].capitalize()} "
                     f"| {r['confidence']:.1f}% | {'✅ Correct' if r['correct'] else '❌ Wrong'} |")
     st.markdown("\n".join(rows))
-    st.markdown("#### Confusion Matrix")
+    st.markdown(
+    '<h4 style="color:#2C1A0E;">Confusion Matrix</h4>',
+    unsafe_allow_html=True
+)
     t_true = [r["true"] for r in val_results]
     t_pred = [r["predicted"] for r in val_results]
     u_rows = sorted(set(t_true),          key=lambda c: CLASS_NAMES.index(c))
