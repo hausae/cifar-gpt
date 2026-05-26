@@ -226,7 +226,7 @@ with col_hero:
     st.markdown("""
 <div style="background:#fff;border:1px solid var(--border);border-radius:var(--r);
             padding:26px 28px;box-shadow:var(--sh);height:100%">
-  <span class="sec-lbl">ICT120 Final Project · Step 6</span>
+  <span class="sec-lbl">ICT120 Final Project</span>
   <h1>Your CIFAR&#8209;10<br>Image Classifier</h1>
   <p style="font-size:13.5px;color:var(--muted);line-height:1.65;max-width:400px;margin:10px 0 18px">
     Upload any image. The CNN resizes it to 32×32, normalizes pixels
