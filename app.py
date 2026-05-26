@@ -247,8 +247,6 @@ with col_arch:
   <div class="arch-row"><div class="arch-dot"></div><div class="arch-name">Input</div><div class="arch-val">32 × 32 × 3</div></div>
   <div class="arch-row"><div class="arch-dot"></div><div class="arch-name">Conv2D</div><div class="arch-val">32 filters, 3×3, ReLU</div></div>
   <div class="arch-row"><div class="arch-dot"></div><div class="arch-name">MaxPool</div><div class="arch-val">2×2</div></div>
-  <div class="arch-row"><div class="arch-dot"></div><div class="arch-name">Conv2D</div><div class="arch-val">64 filters, 3×3, ReLU</div></div>
-  <div class="arch-row"><div class="arch-dot"></div><div class="arch-name">MaxPool</div><div class="arch-val">2×2</div></div>
   <div class="arch-row"><div class="arch-dot"></div><div class="arch-name">Dense</div><div class="arch-val">128 units, ReLU</div></div>
   <div class="arch-row" style="border:none"><div class="arch-dot" style="background:#fff"></div><div class="arch-name">Output</div><div class="arch-val">10 units, Softmax</div></div>
 </div>""", unsafe_allow_html=True)
